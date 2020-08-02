@@ -1,0 +1,21 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="viewModel" type="com.narminas.databinding.viewmodels.MoviesListViewModel" />
+    </data>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movies_recycler"
+            android:padding="@dimen/general_padding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{viewModel.layoutManager}" />
+   </LinearLayout>
+
+</layout>
