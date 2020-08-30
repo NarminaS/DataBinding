@@ -41,7 +41,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
     public MoviesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         MovieItemBinding binding = MovieItemBinding.inflate(inflater, parent, false);
-        System.out.println( "Text is: " + binding.textView.getText());
+        //System.out.println( "Text is: " + binding.textView.getText());
         return new ViewHolder(binding.getRoot());
     }
 
@@ -50,12 +50,12 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.ViewHolder
         Movie movie = movies.get(position);
         holder.binding.setMovie(movie);
         holder.binding.setHandlers(new Handler(context));
-        System.out.println("Image: " +movie.getImage());
+        //System.out.println("Image: " + movie.getImage());
     }
 
     @Override
     public int getItemCount() {
-        System.out.println("Size: " + movies.size());
+        //System.out.println("Size: " + movies.size());
         return movies.size();
     }
 
